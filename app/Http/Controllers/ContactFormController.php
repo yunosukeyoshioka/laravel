@@ -17,7 +17,7 @@ class ContactFormController extends Controller
      */
     public function index()
     {
-        //エロくアント ORマッパー
+        //エロクアント ORマッパー
         //$contacts = ContactForm::all();
         
         //クエリビルダー
