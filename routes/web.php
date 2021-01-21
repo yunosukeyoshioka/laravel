@@ -13,14 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::group(['prefex' => 'contact', 'middleware' => 'auth'], function(){
 
-    Route::get('index', 'ContactFormController@index')->name('contact.index');
+    Route::get('/', 'ContactFormController@index')->name('contact.index');
     Route::get('create', 'ContactFormController@create')->name('contact.create');
     Route::post('store', 'ContactFormController@store')->name('contact.store');
 });
